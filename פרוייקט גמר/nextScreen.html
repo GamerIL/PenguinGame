@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nextScreen.css">
+    <title>משחק פינגווין מחליק</title>
+    
+</head>
+<body>
+    <h1>משחק עובדות</h1>
+    <h2 id="fact">עובדה: פינגווינים יודעים להחליק על שלג וקרח מצוין!</h2>
+    <p>השתמש בכפתורי <b>W</b>, <b>A</b>, <b>S</b>, <b>D</b> כדי להזיז את הפינגווין ולהמנע מהמכשולים.</p>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <div class="score">נקודות: <span id="score">0</span></div>
+    
+    <!-- Sound effect for collision -->
+    <audio id="collisionSound" src="collisionSound.wav"></audio> <!-- שים את קובץ ה-wav כאן -->
+    <script src="nextScreen.js"></script>
+    
+</body>
+</html>

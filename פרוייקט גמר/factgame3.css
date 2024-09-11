@@ -1,0 +1,104 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB;
+}
+
+.game-container {
+    position: relative;
+    width: 4000px; /* Set width to accommodate all obstacles and the nest */
+    height: 100vh;
+    background-image: url("https://www.ncl.com/sites/default/files/antarctica-hero-xl-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.penguin {
+    position: absolute;
+    bottom: 50px; /* Position on the ground */
+    left: 50px;
+    width: 80px;
+    height: 80px;
+    background-image: url('penguin.png'); /* Replace with actual image URL */
+    background-size: cover;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 50px; /* Position on the ground */
+    width: 30px;
+    background-image: url('IceO.png'); /* Replace with actual image URL */
+    background-size: cover;
+}
+
+.obstacle1 { left: 300px; height: 30px; }
+.obstacle2 { left: 600px; height: 40px; }
+.obstacle3 { left: 900px; height: 50px; }
+.obstacle4 { left: 1200px; height: 60px; }
+.obstacle5 { left: 1500px; height: 70px; }
+.obstacle6 { left: 1800px; height: 80px; }
+.obstacle7 { left: 2100px; height: 90px; }
+.obstacle8 { left: 2400px; height: 100px; }
+.obstacle9 { left: 2700px; height: 110px; }
+
+.trampoline {
+    position: absolute;
+    bottom: 50px;
+    left: 3200px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    background-image: url('trampoline.png');
+    background-size: cover;
+}
+
+.nest {
+    position: absolute;
+    bottom: 50px;
+    left: 3500px;
+    width: 100px;
+    height: 100px;
+    background-image: url('nest.png');
+    background-size: cover;
+    display: none;
+}
+
+.pause-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.score-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .penguin, .trampoline, .nest {
+        width: 60px;
+        height: 60px;
+    }
+
+    .obstacle {
+        width: 20px;
+    }
+
+    .pause-button, .score-container {
+        font-size: 14px;
+    }
+}

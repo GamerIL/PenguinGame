@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://pic1.calcalist.co.il/PicServer3/2018/11/27/864410/1_lm.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.title {
+    font-size: 3em;
+    color: #00BFFF; /* Ice Blue */
+    animation: slideIn 2s ease-out;
+    margin-bottom: 0;
+}
+
+.message {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #ADD8E6; /* Light Blue */
+}
+
+.ice-button {
+    background: linear-gradient(145deg, #B0E0E6, #ADD8E6);
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ice-button:before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(30deg);
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.ice-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ice-button:hover:before {
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes snowflakeFall {
+    from {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.snowflake {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: snowflakeFall linear infinite;
+}
+
+.penguin {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: url('https://example.com/penguin.gif') no-repeat center center;
+    background-size: contain;
+    animation: penguinDance 4s infinite;
+}
+
+@keyframes penguinDance {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.ice-crystals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://example.com/ice-crystals.png') repeat;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: shimmer 10s linear infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.firework {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('https://media0.giphy.com/media/OAqtBe3dqscCwzBlDy/giphy.gif?cid=6c09b952aczpbqnhuvvafwr1kfgo659uo0v692z5ozyrblg5&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s') no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    pointer-events: none;
+    animation: fireworkExplode 2s ease-out infinite;
+}
+
+@keyframes fireworkExplode {
+    0% {
+        opacity: 1;
+        transform: translateY(-100px) scale(0);
+    }
+    50% {
+        transform: translateY(50vh) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
+    }
+}

@@ -1,0 +1,204 @@
+    /* General Styles */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: url('https://i.natgeofe.com/k/88de42b8-764c-40d2-89ee-e72d55dc95b8/emperor-penguin-chicks.jpg') no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+        background-size: cover;
+        position: relative;
+      }
+  
+      /* Snowflake Animation */
+      .snowflake {
+        position: absolute;
+        top: -10%;
+        z-index: 1;
+        font-size: 1.5em;
+        color: #ffffff;
+        user-select: none;
+        pointer-events: none;
+        animation: snowflakeFall linear infinite;
+      }
+  
+      @keyframes snowflakeFall {
+        to {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+  
+      /* Create multiple snowflakes */
+      .snowflake:nth-child(1) { left: 10%; animation-duration: 10s; }
+      .snowflake:nth-child(2) { left: 25%; animation-duration: 15s; }
+      .snowflake:nth-child(3) { left: 40%; animation-duration: 12s; }
+      .snowflake:nth-child(4) { left: 55%; animation-duration: 20s; }
+      .snowflake:nth-child(5) { left: 70%; animation-duration: 18s; }
+      .snowflake:nth-child(6) { left: 85%; animation-duration: 25s; }
+  
+      nav {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1em 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+  
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+  
+      nav ul li {
+        margin: 0 20px;
+      }
+  
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        transition: color 0.4s, transform 0.4s;
+      }
+  
+      nav ul li a:hover {
+        color: #00ffcc;
+        transform: scale(1.15);
+      }
+  
+      section {
+        padding: 100px 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+      }
+  
+      #home {
+        background: rgba(0, 0, 0, 0.5);
+        animation: backgroundFade 20s infinite alternate;
+      }
+  
+      #signup {
+        background: linear-gradient(135deg, #00bfff, #00ff00);
+        animation: backgroundSlide 15s infinite alternate;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+      }
+  
+      #signup h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #ffffff;
+        animation: fadeIn 1s ease-in-out;
+      }
+  
+      #signup form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 400px;
+        animation: slideUp 1s ease-out;
+      }
+  
+      #signup input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 2px solid #00bfff;
+        border-radius: 5px;
+        font-size: 1em;
+        transition: border-color 0.3s;
+      }
+  
+      #signup input:focus {
+        border-color: #00ff00;
+      }
+  
+      #signup button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #00bfff, #00ff00);
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+  
+      #signup button:hover {
+        background: linear-gradient(135deg, #00ff00, #00bfff);
+        transform: scale(1.05);
+      }
+  
+      #rules {
+        background-color: lightgreen;
+        padding: 50px 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+  
+      .rule-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+  
+      .rule-item img {
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+      }
+  
+      .rule-item p {
+        font-size: 1.5em;
+        margin: 0;
+        color: darkgreen;
+      }
+  
+      /* Animations */
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+  
+      @keyframes slideUp {
+        0% { transform: translateY(50px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+      }
+  
+      @keyframes backgroundFade {
+        0% { filter: brightness(100%); }
+        100% { filter: brightness(50%); }
+      }
+  
+      @keyframes backgroundSlide {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 100% 100%; }
+      }
+  
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }

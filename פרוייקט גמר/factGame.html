@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="factGame.css">
+    <title>Fact Game</title>
+    
+    
+</head>
+<body>
+    <h1>משחק עובדות</h1>
+    <h2 id="fact">עובדה: פינגווינים הם ציידים מעולים מתחת למים.</h2>
+    <p>השתמש בכפתורי <b>W A S D</b> כדי להזיז את הפינגווין ולתפוס את הדג והסרטן.</p>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        <img id="penguin" src="penguin.gif" alt="Penguin GIF">
+        <img id="fish" src="fish.gif" alt="Fish GIF">
+        <img id="crab" src="crab.gif" alt="Crab GIF">
+    </div>
+    <div class="score">נקודות: <span id="score">0</span></div>
+
+    <script src="factGame.js"></script>
+</body>
+</html>
